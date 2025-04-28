@@ -39,7 +39,8 @@ public class DataTypesLab {
 
         // TODO: 6. 자신의 키(cm)와 몸무게(kg)를 저장하는 변수를 선언하고 
         // BMI 지수를 계산하여 출력하세요. (BMI = 몸무게(kg) / (키(m) * 키(m)))
-        BigDecimal bd = new BigDecimal("83").divide(new BigDecimal("1.78").multiply(new BigDecimal("1.78")), RoundingMode.FLOOR);
+        BigDecimal bd;
+        bd = new BigDecimal("83").divide(new BigDecimal("1.78").multiply(new BigDecimal("1.78")),2, RoundingMode.HALF_UP);
 
         System.out.println(bd);
 
