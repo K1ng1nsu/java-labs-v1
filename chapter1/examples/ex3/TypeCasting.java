@@ -30,6 +30,7 @@ public class TypeCasting {
 
         // 2. 명시적 형변환(Explicit Casting, 캐스팅 연산자 사용)
         // 큰 타입에서 작은 타입으로 변환할 때 데이터 손실 가능성 있음
+        // (타입)
         System.out.println("\n===== 명시적 형변환 =====");
         double doubleValue2 = 3.14159;
         intValue = (int) doubleValue2;  // double -> int 명시적 형변환 (소수점 손실)
@@ -52,7 +53,8 @@ public class TypeCasting {
         // 정수 연산 (int보다 작은 타입(byte, short, char)은 int로 변환 후 연산)
         byte b1 = 10;
         byte b2 = 20;
-        // byte b3 = b1 + b2;  // 컴파일 에러! b1과 b2는 int로 변환 후 연산됨
+
+//        byte b3 = b1 + b2;   // 컴파일 에러! b1과 b2는 int로 변환 후 연산됨
         int i3 = b1 + b2;      // int 타입으로 결과 저장
         byte b3 = (byte)(b1 + b2);  // 명시적 형변환으로 해결
         
