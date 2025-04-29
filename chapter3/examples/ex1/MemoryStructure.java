@@ -15,7 +15,6 @@ public class MemoryStructure {
         int localVariable = 300;
         System.out.println("지역 변수(스택): " + localVariable);
         System.out.println("클래스 변수(메소드 영역): " + staticVariable);
-        
         // 객체 생성 - 참조 변수는 스택에, 객체는 힙에 저장
         MemoryStructure obj = new MemoryStructure();
         System.out.println("인스턴스 변수(힙): " + obj.instanceVariable);
