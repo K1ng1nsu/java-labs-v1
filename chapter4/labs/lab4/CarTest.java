@@ -11,29 +11,31 @@ public class CarTest {
         
         // TODO: Car 객체를 생성하세요. (내부적으로 Engine 객체 포함)
         // 예: new Car("Sonata", "Black", "Gasoline", 180)
-        
+        Car car = new Car("ioniq5","White");
         
         
         // TODO: Driver 객체를 생성하세요.
         // 예: new Driver("John", 5)
-        
+        Driver driver = new Driver("Jane",5);
         
         
         // TODO: Car 객체의 정보를 출력하세요.
-        
+        System.out.println(car);
         
         
         // TODO: Car 객체의 메소드를 호출하세요. (시동, 가속 등)
-        
+        car.readyToDrive();
+        car.speedUp();
         
         
         // TODO: Driver 객체가 Car 객체를 사용하도록 메소드를 호출하세요.
-        
+        driver.checkCar(car);
         
         
         // TODO: 추가적인 Car 객체를 생성하고 Driver 객체가 다른 차를 운전하도록 하세요.
         // 예: new Car("Tesla", "White", "Electric", 330)
-        
-        
+        Car newCar = new Car("ioniq6","White");
+
+        driver.drive(newCar);
     }
 } 

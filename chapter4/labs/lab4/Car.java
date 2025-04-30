@@ -8,38 +8,86 @@ package chapter4.labs.lab4;
 public class Car {
     // TODO: 적절한 접근 제한자를 사용하여 필드를 정의하세요.
     // (모델명, 색상, 속도, Engine 타입의 필드 등)
+    private String model;
+    private String color;
+    private int speed;
+    private Engine engine;
+
     
     
     
     // TODO: 생성자를 정의하세요.
     // (Engine 객체를 생성하여 포함관계 구현)
-    
-    
-    
+
+    public Car(String model, String color) {
+        this.model = model;
+        this.color = color;
+        this.engine = new Engine("Electric","168");
+    }
+
+
     // TODO: 자동차를 시동하는 메소드를 정의하세요.
     // (내부적으로 Engine 객체의 메소드 호출)
-    
+    public void readyToDrive() {
+        engine.start();
+        System.out.println("Car is ready to Drive");
+    }
     
     
     // TODO: 자동차를 정지하는 메소드를 정의하세요.
     // (내부적으로 Engine 객체의 메소드 호출)
-    
+    public void pullOVer(){
+        System.out.println("pull over");
+        engine.stop();
+    }
     
     
     // TODO: 자동차의 속도를 증가시키는 메소드를 정의하세요.
-    
+    public void speedUp(){
+        speed = speed + 10;
+        System.out.println("Speeding up : "+ speed +" km/h");
+    }
     
     
     // TODO: 자동차의 속도를 감소시키는 메소드를 정의하세요.
+    public void speedDown(){
+        speed = speed - 10;
+        System.out.println("Speeding down : "+ speed +" km/h");
+    }
     
     
     
     // TODO: 자동차의 정보를 출력하는 메소드를 정의하세요.
     // (내부적으로 Engine 객체의 정보도 출력)
-    
-    
-    
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "model='" + model + '\'' +
+                ", color='" + color + '\'' +
+                ", speed=" + speed +
+                ", engine=" + engine +
+                '}';
+    }
+
+
     // TODO: 필요한 getter/setter 메소드를 정의하세요.
-    
-    
-} 
+
+
+    public String getModel() {
+        return model;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+}
