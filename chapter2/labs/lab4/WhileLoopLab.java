@@ -26,7 +26,6 @@ public class WhileLoopLab {
 
         System.out.println("최종 합계: " + sum);
 
-
         // 2. 1부터 100까지의 짝수만 출력하는 프로그램
         System.out.println("\n1부터 100까지의 짝수 출력:");
 
@@ -42,7 +41,6 @@ public class WhileLoopLab {
             }
             i++;
         }
-
 
         // 3. 구구단 출력 (do-while 사용)
         System.out.println("\n출력할 구구단의 단을 입력하세요 (2-9): ");
@@ -62,7 +60,6 @@ public class WhileLoopLab {
             }
 
         } while (!isPrinted);
-
 
         // 4. 숫자 맞추기 게임
         System.out.println("\n숫자 맞추기 게임:");
@@ -92,7 +89,6 @@ public class WhileLoopLab {
                 System.out.println("더 작은 숫자를 입력하세요.");
             }
         }
-
 
         // 5. 피보나치 수열 출력하기
         System.out.println("\n피보나치 수열 출력:");
@@ -124,7 +120,6 @@ public class WhileLoopLab {
             }
         }
 
-
         scanner.close();
     }
-} 
+}

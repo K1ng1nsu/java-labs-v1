@@ -1,7 +1,8 @@
 package chapter3.labs.lab4;
 
-
 import java.util.Scanner;
+
+import static chapter3.labs.lab4.EnumLab.DayOfWeek.SUNDAY;
 
 /**
  * Enum(열거형) 활용하기 실습
@@ -14,7 +15,6 @@ public class EnumLab {
         System.out.println("===== 요일 Enum 활용하기 =====");
         System.out.println("요일을 입력하세요 (월, 화, 수, 목, 금, 토, 일): ");
         String input = scanner.nextLine();
-
 
         // TODO: 입력받은 요일에 해당하는 DayOfWeek Enum 상수를 찾아 switch 문에서 활용하세요.
         // 평일(월~금)인 경우 "평일입니다."를, 주말(토, 일)인 경우 "주말입니다."를 출력하세요.
@@ -46,8 +46,9 @@ public class EnumLab {
         // Season Enum에 평균 기온과 특징을 필드로 추가하고, 이를 활용하세요.
 
         Season seasonByNumOfMonth = Season.getSeasonByNumOfMonth(month);
-        System.out.println(month + "월은 " + seasonByNumOfMonth.getKorean() + "입니다. " + seasonByNumOfMonth.getDescription() + "이며 평균 기온은 " + seasonByNumOfMonth.getAverageTemperature() + "℃입니다.");
-
+        System.out
+                .println(month + "월은 " + seasonByNumOfMonth.getKorean() + "입니다. " + seasonByNumOfMonth.getDescription()
+                        + "이며 평균 기온은 " + seasonByNumOfMonth.getAverageTemperature() + "℃입니다.");
 
         // 3. 상태 전이 Enum 활용하기
         System.out.println("\n===== 상태 전이 Enum 활용하기 =====");
@@ -63,14 +64,15 @@ public class EnumLab {
         do {
             System.out.print("현재 상태는 " + taskStatus + " 입니다. next 나 exit를 입력해주세요.");
             userInput = scanner.nextLine();
-            if(userInput.equals("next")) { taskStatus = taskStatus.nextStatus();}
+            if (userInput.equals("next")) {
+                taskStatus = taskStatus.nextStatus();
+            }
 
-        }while(!userInput.equals("exit"));
-
+        } while (!userInput.equals("exit"));
 
         // 4. 연산자 Enum 활용하기
         System.out.println("\n===== 연산자 Enum 활용하기 =====");
-//        scanner.nextLine(); // 버퍼 비우기
+        // scanner.nextLine(); // 버퍼 비우기
 
         // TODO: Operator Enum을 구현하고, 두 수에 대한 사칙연산을 수행하세요.
         // Operator는 ADD(+), SUBTRACT(-), MULTIPLY(*), DIVIDE(/) 연산을 가지며,
@@ -84,10 +86,12 @@ public class EnumLab {
         String strOperator = scanner.next();
         Operator operator = Operator.getOperator(strOperator);
 
-
         System.out.print(num1 + " " + operator + " " + num2 + " = " + operator.calculate(num1, num2));
-
 
         scanner.close();
     }
-} 
+
+    public enum DayOfWeek {
+        SUNDAY, MONDAY, TUESDAY, WEDNESDAY,
+    }
+}

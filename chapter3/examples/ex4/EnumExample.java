@@ -162,6 +162,12 @@ enum Operation {
 
 // 상태 전이를 구현한 Enum 정의
 enum TaskStatus {
+    READY {
+        @Override
+        public TaskStatus nextStatus() {
+            return PENDING;
+        }
+    },
     PENDING {
         @Override
         public TaskStatus nextStatus() {

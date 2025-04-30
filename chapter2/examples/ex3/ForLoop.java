@@ -7,16 +7,18 @@ public class ForLoop {
     public static void main(String[] args) {
         // 기본 for 반복문
         System.out.println("기본 for 반복문:");
-        for (int i = 1; i <= 5; i++) {
+        for (int i = 1; i < 5; i++) {
             System.out.println("반복 " + i + "번째");
         }
         
         // 중첩 for 반복문을 이용한 구구단 출력
         System.out.println("\n구구단 일부 출력:");
         for (int i = 2; i <= 4; i++) {
+
             System.out.println(i + "단:");
             for (int j = 1; j <= 9; j++) {
                 System.out.println(i + " x " + j + " = " + (i * j));
+
             }
             System.out.println();
         }
@@ -39,7 +41,7 @@ public class ForLoop {
         System.out.println("\ncontinue 사용 예제:");
         for (int i = 1; i <= 10; i++) {
             if (i % 2 == 0) {
-                continue; // 짝수일 경우 아래 코드를 실행하지 않고 다음 반복으로 넘어감
+                break; // 짝수일 경우 아래 코드를 실행하지 않고 다음 반복으로 넘어감
             }
             System.out.println("홀수: " + i);
         }

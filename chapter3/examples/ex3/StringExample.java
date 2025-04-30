@@ -108,7 +108,8 @@ public class StringExample {
         sb.append("is ");
         sb.append("awesome!");
         System.out.println("StringBuilder 결과: " + sb.toString());
-
+        
+        
         // 성능 비교
         System.out.println("\n===== 성능 비교 =====");
         

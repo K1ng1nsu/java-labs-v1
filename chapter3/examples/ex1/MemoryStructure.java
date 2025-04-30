@@ -40,11 +40,11 @@ public class MemoryStructure {
         System.out.println("\n===== 매개변수 전달 방식 =====");
 
         int number = 10;
+        Person person = new Person("John");
         System.out.println("메소드 호출 전 number: " + number);
         changeValue(number); // 값에 의한 전달 (Call by Value)
         System.out.println("메소드 호출 후 number: " + number); // 변경 없음
 
-        Person person = new Person("John");
         System.out.println("메소드 호출 전 person 이름: " + person.getName());
         changeName(person); // 참조에 의한 전달 (Call by Reference)
         System.out.println("메소드 호출 후 person 이름: " + person.getName()); // 변경됨
@@ -94,4 +94,4 @@ class Person {
     public void setName(String name) {
         this.name = name;
     }
-} 
+}
