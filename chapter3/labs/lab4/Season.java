@@ -1,5 +1,6 @@
 package chapter3.labs.lab4;
 
+
 public enum Season {
     SPRING("봄","꽃이 피는 계절", 15),
     SUMMER("여름","더운 계절", 28),
@@ -16,6 +17,8 @@ public enum Season {
         this.description = description;
         this.averageTemperature = averageTemperature;
     }
+
+
 
     // Getter 메소드
 

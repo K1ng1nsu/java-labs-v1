@@ -15,6 +15,7 @@ public class EnumLab {
         System.out.println("요일을 입력하세요 (월, 화, 수, 목, 금, 토, 일): ");
         String input = scanner.nextLine();
 
+
         // TODO: 입력받은 요일에 해당하는 DayOfWeek Enum 상수를 찾아 switch 문에서 활용하세요.
         // 평일(월~금)인 경우 "평일입니다."를, 주말(토, 일)인 경우 "주말입니다."를 출력하세요.
 
