@@ -12,14 +12,13 @@
 - Chapter 1: 자바 기초 (변수, 데이터 타입, 연산자)
 - Chapter 2: 제어문과 반복문
 - Chapter 3: 배열과 메서드
-- Chapter 4: 클래스와 객체
-- Chapter 5: 인터페이스
+- Chapter 4: OOP 1 (클래스와 객체 기본)
+- Chapter 5: OOP 2 (상속, 추상 클래스, 인터페이스)
 - Chapter 6: 예외 처리 및 디버깅
-- Chapter 7: 컬렉션 프레임워크
-- Chapter 8: 제네릭
+- Chapter 7: 자바 표준 라이브러리 & 파일 I/O
+- Chapter 8: 제네릭 & 컬렉션 프레임워크
 - Chapter 9: 람다식과 스트림
-- Chapter 10: 파일 입출력
-- Chapter 11: 멀티스레딩
+- Chapter 10: 멀티스레딩
 
 ## 사용 방법
 학생들은 이 레포지토리를 포크하여 labs 폴더에서 직접 코드를 작성하고 실습할 수 있습니다.
