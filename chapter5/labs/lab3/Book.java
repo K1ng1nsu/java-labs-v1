@@ -20,8 +20,7 @@ public class Book implements Buyable {
         this.author = author;
         this.price = price;
     }
-
-
+    
     // TODO: Buyable 인터페이스의 메소드 구현
 
     @Override

@@ -13,6 +13,8 @@ public class BasicExceptionLab {
         System.out.println("Lab 1: 기본 예외처리 실습");
         
         // TODO: Scanner 객체를 생성하세요.
+        Scanner input = new Scanner(System.in);
+
         
         
         // TODO: try-catch-finally 구문을 작성하세요.
@@ -23,7 +25,23 @@ public class BasicExceptionLab {
         //    - NumberFormatException: 숫자가 아닌 값을 입력한 경우
         //    - 기타 예외: 기타 모든 예외 상황
         // 4. finally 블록에서 Scanner 객체를 닫고 프로그램 종료 메시지를 출력하세요.
-        
+        System.out.print("숫자를 입력하세요. : ");
+        int num1 = input.nextInt();
+        System.out.print("숫자를 입력하세요. : ");
+        int num2 = input.nextInt();
+        try{
+            double div = (double) num1 / num2;
+            System.out.println("div = " + div);
+        }catch(ArithmeticException e){
+            System.out.println("CAN NOT DIVIDE BY ZERO");
+        }catch(NumberFormatException e){
+            System.out.println("YOU MUST ENTER A NUMBER");
+        }catch(Exception e){
+            System.out.println("Something went wrong");
+        }finally{
+            input.close();
+            System.out.println("Program ended");
+        }
         
     }
 } 

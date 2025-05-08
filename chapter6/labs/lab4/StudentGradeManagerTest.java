@@ -77,7 +77,7 @@ public class StudentGradeManagerTest {
         if (student != null) {
             System.out.println("조회 결과: " + student);
         } else {
-            System.out.println("해당 ID의 학생을 찾을 수 없습니다.");
+            throw new StudentCanNotFoundException();
         }
     }
     
