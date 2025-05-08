@@ -25,7 +25,6 @@ public class FileIOExceptionLab {
         int lineNumber = 0;
         int wordNumber = 0;
         int charNumber = 0;
-
         // TODO: try-with-resources 구문을 사용하여 파일을 읽고 내용을 분석하세요.
         // 1. BufferedReader를 사용하여 파일을 한 줄씩 읽습니다.
         // 2. 각 줄의 길이와 단어 수를 계산합니다.
@@ -35,7 +34,7 @@ public class FileIOExceptionLab {
         //    - IOException: 파일 읽기 중 오류가 발생한 경우
         //    - 기타 예외: 기타 모든 예외 상황
         try (
-                BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\insu\\Documents\\GitHub\\java-labs-v1\\chapter6\\labs\\lab2\\"+filename+".txt"));
+                BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\insu\\Documents\\GitHub\\java-labs-v1\\chapter6\\labs\\lab2\\" + filename + ".txt"));
         ) {
             while (br.ready()) {
                 String line = br.readLine();

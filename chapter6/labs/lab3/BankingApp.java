@@ -186,13 +186,10 @@ public class BankingApp {
         String accountNumberForDeposit = scanner.nextLine();
 
         System.out.print("출금하실 금액을 입력하세요. : ");
-        double drawAmount =getDoubleValue(scanner);
+        double drawAmount = getDoubleValue(scanner);
 
         try {
-            BankAccount accountForDraw = bankingSystem.getAccount(accountNumberForDraw);
-            BankAccount accountForDeposit = bankingSystem.getAccount(accountNumberForDeposit);
-            accountForDraw.withdraw(drawAmount);
-            accountForDeposit.deposit(drawAmount);
+            bankingSystem.transfer(accountNumberForDraw, accountNumberForDeposit, drawAmount);
         } catch (InvalidAccountException | InsufficientBalanceException | IllegalArgumentException e) {
             System.out.println(e.getMessage());
         }
