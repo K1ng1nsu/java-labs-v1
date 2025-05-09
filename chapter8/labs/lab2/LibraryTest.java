@@ -1,67 +1,70 @@
 package chapter8.labs.lab2;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 
 /**
  * Lab 2: 컬렉션 프레임워크 활용하기
- *
+ * <p>
  * 도서 관리 시스템의 기능을 테스트하는 클래스입니다.
  */
 public class LibraryTest {
     public static void main(String[] args) {
         // LibraryManager 객체 생성
-        LibraryManager manager = new LibraryManager();
-        
+        LibraryManager manager = new LibraryManager(new ArrayList<>(), new HashMap<>(), new HashSet<>());
+
         // 테스트용 도서 데이터 추가
         addTestBooks(manager);
-        
+
         // 전체 도서 목록 출력
         System.out.println("=== 전체 도서 목록 ===");
         printBookList(manager.getAllBooks());
-        
+
         // 도서 검색 테스트
         System.out.println("\n=== '자바'가 제목에 포함된 도서 ===");
         printBookList(manager.searchBooksByTitle("자바"));
-        
+
         System.out.println("\n=== '김'으로 시작하는 저자의 도서 ===");
         printBookList(manager.searchBooksByAuthor("김"));
-        
+
         // 도서 정렬 테스트
         System.out.println("\n=== 제목 기준 정렬 ===");
         printBookList(manager.getSortedBooksByTitle());
-        
+
         System.out.println("\n=== 출판년도 기준 정렬 ===");
         printBookList(manager.getSortedBooksByYear());
-        
+
         System.out.println("\n=== 가격 기준 정렬 ===");
         printBookList(manager.getSortedBooksByPrice());
-        
+
         // 카테고리 테스트
         System.out.println("\n=== 모든 카테고리 ===");
         System.out.println(manager.getCategories());
-        
+
         System.out.println("\n=== 프로그래밍 카테고리 도서 ===");
         printBookList(manager.getBooksByCategory("프로그래밍"));
-        
+
         // 도서 대여 테스트
         String userId = "user001";
         System.out.println("\n=== 도서 대여 테스트 ===");
         String isbnToBorrow = "9788960777330";
         boolean borrowed = manager.borrowBook(userId, isbnToBorrow);
         System.out.println("도서 대여 결과: " + (borrowed ? "성공" : "실패"));
-        
+
         System.out.println("\n=== 사용자 대여 도서 목록 ===");
         printBookList(manager.getBorrowedBooks(userId));
-        
+
         // 도서 반납 테스트
         System.out.println("\n=== 도서 반납 테스트 ===");
         boolean returned = manager.returnBook(userId, isbnToBorrow);
         System.out.println("도서 반납 결과: " + (returned ? "성공" : "실패"));
-        
+
         System.out.println("\n=== 반납 후 사용자 대여 도서 목록 ===");
         printBookList(manager.getBorrowedBooks(userId));
     }
-    
+
     /**
      * 테스트용 도서 데이터 추가 메소드
      */
@@ -77,7 +80,7 @@ public class LibraryTest {
         manager.addBook(new Book("9788960777415", "네트워크 보안", "김작가", "컴퓨터네트워크", 2022, 38000));
         manager.addBook(new Book("9788960777422", "클라우드 컴퓨팅", "정작가", "컴퓨터시스템", 2021, 36000));
     }
-    
+
     /**
      * 도서 목록 출력 메소드
      */
@@ -86,7 +89,7 @@ public class LibraryTest {
             System.out.println("도서가 없습니다.");
             return;
         }
-        
+
         for (Book book : books) {
             System.out.println(book);
         }
