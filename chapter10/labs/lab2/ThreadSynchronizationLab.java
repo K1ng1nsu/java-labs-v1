@@ -194,6 +194,7 @@ public class ThreadSynchronizationLab {
             messages.remove(0);
 
             notFull.signal();
+            lock.unlock();
 
             return message; // 임시 반환값
         }
